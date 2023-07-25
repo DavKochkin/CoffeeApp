@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04BC96352A6FD816003F4295 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC96342A6FD816003F4295 /* AppDelegate.swift */; };
-		04BC96392A6FD816003F4295 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC96382A6FD816003F4295 /* ViewController.swift */; };
+		04BC96392A6FD816003F4295 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC96382A6FD816003F4295 /* HomeViewController.swift */; };
 		04BC963E2A6FD817003F4295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BC963D2A6FD817003F4295 /* Assets.xcassets */; };
 		04BC96412A6FD817003F4295 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BC963F2A6FD817003F4295 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		04BC96312A6FD816003F4295 /* CoffeeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BC96342A6FD816003F4295 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04BC96382A6FD816003F4295 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04BC96382A6FD816003F4295 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		04BC963D2A6FD817003F4295 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04BC96402A6FD817003F4295 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04BC96422A6FD817003F4295 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				04BC96342A6FD816003F4295 /* AppDelegate.swift */,
-				04BC96382A6FD816003F4295 /* ViewController.swift */,
+				04BC96382A6FD816003F4295 /* HomeViewController.swift */,
 				04BC96482A6FD83F003F4295 /* Files */,
 			);
 			path = CoffeeApp;
@@ -139,7 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04BC96392A6FD816003F4295 /* ViewController.swift in Sources */,
+				04BC96392A6FD816003F4295 /* HomeViewController.swift in Sources */,
 				04BC96352A6FD816003F4295 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
