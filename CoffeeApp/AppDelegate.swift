@@ -92,7 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let giftVC = GiftViewController()
         let storeVC = StoresViewController()
         
-        let homeNC = UINavigationController(rootViewController: homeVC)
+        let homeNC = makeNavigationController(rootViewController: homeVC, title: "Good afternoon, David!")
         let scanNC = UINavigationController(rootViewController: scanVC)
         let orderNC = UINavigationController(rootViewController: orderVC)
         let giftNC = UINavigationController(rootViewController: giftVC)
@@ -105,6 +105,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = tabBarController
         
         return true
+    }
+    
+    func makeNavigationController(rootViewController: UIViewController, title: String) -> UINavigationController {
+        
+        let navigationController = UINavigationController(rootViewController: rootViewController)
+        navigationController.navigationBar.prefersLargeTitles = true
+        
+        let attrs = [
+            NSAttributedString.Key.foregroundColor: UIColor.label,
+            NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .largeTitle).bold()
+        ]
+        
+        navigationController.navigationBar.largeTitleTextAttributes = attrs
+        navigationController.navigationBar.scrollEdgeAppearance = navigationController.navigationBar.standardAppearance
+        navigationController.navigationBar.topItem?.title = title
+        
+        return navigationController
     }
 
 }

@@ -13,6 +13,7 @@ class HomeViewController: CoffeeAppViewController {
         super.viewDidLoad()
         setTabBarImage(imageName: "house.fill", title: "Home")
         
+        
         if #available(iOS 15.0, *) {
             navigationController?.tabBarController?.tabBar.scrollEdgeAppearance = navigationController?.tabBarController?.tabBar.standardAppearance
         }
