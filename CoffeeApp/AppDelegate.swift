@@ -104,25 +104,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         window?.rootViewController = tabBarController
         
+        tabBarController.tabBar.tintColor = .lightGreen
+        tabBarController.tabBar.isTranslucent = false 
+        
         return true
     }
-    
-    func makeNavigationController(rootViewController: UIViewController, title: String) -> UINavigationController {
-        
-        let navigationController = UINavigationController(rootViewController: rootViewController)
-        navigationController.navigationBar.prefersLargeTitles = true
-        
-        let attrs = [
-            NSAttributedString.Key.foregroundColor: UIColor.label,
-            NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .largeTitle).bold()
-        ]
-        
-        navigationController.navigationBar.largeTitleTextAttributes = attrs
-        navigationController.navigationBar.scrollEdgeAppearance = navigationController.navigationBar.standardAppearance
-        navigationController.navigationBar.topItem?.title = title
-        
-        return navigationController
-    }
-
 }
 
