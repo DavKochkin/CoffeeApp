@@ -16,11 +16,11 @@ class HomeViewController: CoffeeAppViewController {
     var headerViewTopConstraint: NSLayoutConstraint?
     
     let tiles = [
-                TileView("Star balance"),
-                TileView("Bonus stars"),
-                TileView("Try these"),
-                TileView("Welcome back"),
-                TileView("Uplifting")
+                PlaceholderViewController("Star balance"),
+                PlaceholderViewController("Bonus stars"),
+                PlaceholderViewController("Try these"),
+                PlaceholderViewController("Welcome back"),
+                PlaceholderViewController("Uplifting")
                 ]
 
     override func viewDidLoad() {

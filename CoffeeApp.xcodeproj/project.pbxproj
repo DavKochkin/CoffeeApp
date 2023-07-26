@@ -13,7 +13,9 @@
 		04BC96412A6FD817003F4295 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BC963F2A6FD817003F4295 /* LaunchScreen.storyboard */; };
 		04BC964A2A7001A9003F4295 /* Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC96492A7001A9003F4295 /* Factories.swift */; };
 		04E0D8902A710A450090DC77 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0D88F2A710A450090DC77 /* HomeHeaderView.swift */; };
-		04E0D8922A7187C20090DC77 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0D8912A7187C20090DC77 /* TileView.swift */; };
+		04E0D8922A7187C20090DC77 /* PlaceholderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0D8912A7187C20090DC77 /* PlaceholderViewController.swift */; };
+		04E0D8942A7198540090DC77 /* TileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0D8932A7198540090DC77 /* TileViewController.swift */; };
+		04E0D8962A7198820090DC77 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0D8952A7198820090DC77 /* TileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +27,9 @@
 		04BC96422A6FD817003F4295 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04BC96492A7001A9003F4295 /* Factories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factories.swift; sourceTree = "<group>"; };
 		04E0D88F2A710A450090DC77 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
-		04E0D8912A7187C20090DC77 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		04E0D8912A7187C20090DC77 /* PlaceholderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderViewController.swift; sourceTree = "<group>"; };
+		04E0D8932A7198540090DC77 /* TileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileViewController.swift; sourceTree = "<group>"; };
+		04E0D8952A7198820090DC77 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +85,9 @@
 			children = (
 				04BC96382A6FD816003F4295 /* HomeViewController.swift */,
 				04E0D88F2A710A450090DC77 /* HomeHeaderView.swift */,
-				04E0D8912A7187C20090DC77 /* TileView.swift */,
+				04E0D8912A7187C20090DC77 /* PlaceholderViewController.swift */,
+				04E0D8932A7198540090DC77 /* TileViewController.swift */,
+				04E0D8952A7198820090DC77 /* TileView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -157,9 +163,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				04E0D8902A710A450090DC77 /* HomeHeaderView.swift in Sources */,
+				04E0D8962A7198820090DC77 /* TileView.swift in Sources */,
 				04BC964A2A7001A9003F4295 /* Factories.swift in Sources */,
+				04E0D8942A7198540090DC77 /* TileViewController.swift in Sources */,
 				04BC96392A6FD816003F4295 /* HomeViewController.swift in Sources */,
-				04E0D8922A7187C20090DC77 /* TileView.swift in Sources */,
+				04E0D8922A7187C20090DC77 /* PlaceholderViewController.swift in Sources */,
 				04BC96352A6FD816003F4295 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
