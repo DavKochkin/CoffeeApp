@@ -12,6 +12,7 @@
 		04BC963E2A6FD817003F4295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BC963D2A6FD817003F4295 /* Assets.xcassets */; };
 		04BC96412A6FD817003F4295 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BC963F2A6FD817003F4295 /* LaunchScreen.storyboard */; };
 		04BC964A2A7001A9003F4295 /* Factories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC96492A7001A9003F4295 /* Factories.swift */; };
+		04E0D8902A710A450090DC77 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0D88F2A710A450090DC77 /* HomeHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		04BC96402A6FD817003F4295 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04BC96422A6FD817003F4295 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04BC96492A7001A9003F4295 /* Factories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factories.swift; sourceTree = "<group>"; };
+		04E0D88F2A710A450090DC77 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,10 +56,10 @@
 		04BC96332A6FD816003F4295 /* CoffeeApp */ = {
 			isa = PBXGroup;
 			children = (
-				04BC96342A6FD816003F4295 /* AppDelegate.swift */,
-				04BC96382A6FD816003F4295 /* HomeViewController.swift */,
-				04BC96492A7001A9003F4295 /* Factories.swift */,
 				04BC96482A6FD83F003F4295 /* Files */,
+				04BC96342A6FD816003F4295 /* AppDelegate.swift */,
+				04BC96492A7001A9003F4295 /* Factories.swift */,
+				04E0D88E2A710A040090DC77 /* Home */,
 			);
 			path = CoffeeApp;
 			sourceTree = "<group>";
@@ -70,6 +72,15 @@
 				04BC96422A6FD817003F4295 /* Info.plist */,
 			);
 			path = Files;
+			sourceTree = "<group>";
+		};
+		04E0D88E2A710A040090DC77 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				04BC96382A6FD816003F4295 /* HomeViewController.swift */,
+				04E0D88F2A710A450090DC77 /* HomeHeaderView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E0D8902A710A450090DC77 /* HomeHeaderView.swift in Sources */,
 				04BC964A2A7001A9003F4295 /* Factories.swift in Sources */,
 				04BC96392A6FD816003F4295 /* HomeViewController.swift in Sources */,
 				04BC96352A6FD816003F4295 /* AppDelegate.swift in Sources */,
