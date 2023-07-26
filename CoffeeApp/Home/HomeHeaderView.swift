@@ -43,6 +43,20 @@ extension HomeHeaderView {
     }
     
     func layout() {
+        addSubview(greeting)
+        addSubview(inboxButton)
+        
+        NSLayoutConstraint.activate([
+            greeting.topAnchor.constraint(equalToSystemSpacingBelow: topAnchor, multiplier: 1),
+            greeting.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 1),
+            trailingAnchor.constraint(equalToSystemSpacingAfter: greeting.trailingAnchor, multiplier: 1),
+            
+            
+            inboxButton.topAnchor.constraint(equalToSystemSpacingBelow: greeting.bottomAnchor, multiplier: 2),
+            inboxButton.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2),
+            bottomAnchor.constraint(equalToSystemSpacingBelow: inboxButton.bottomAnchor, multiplier: 1),
+            
+        ])
 
     }
 }
