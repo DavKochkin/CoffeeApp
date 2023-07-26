@@ -10,6 +10,8 @@ import UIKit
 class HomeViewController: CoffeeAppViewController {
     
     let headerView = HomeHeaderView()
+    var headerViewTopConstraints: NSLayoutConstraint?
+    
     var tableView = UITableView()
     
     let cellId = "cellId"
@@ -48,8 +50,11 @@ extension HomeViewController {
         view.addSubview(headerView)
         view.addSubview(tableView)
         
+        headerViewTopConstraints = headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
+        
         NSLayoutConstraint.activate([
-            headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+        //    headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            headerViewTopConstraints!,
             headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             
@@ -101,6 +106,17 @@ extension HomeViewController: UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let y = scrollView.contentOffset.y
         
-        print(y)
+        let swipinDown = y <= 0
+        let shouldSnap = y > 30
+        let labelHeight = headerView.greeting.frame.height + 16 // label + spacer (102)
+        
+        UIView.animate(withDuration: 0.3) {
+            self.headerView.greeting.alpha = swipinDown ? 1.0 : 0.0
+        }
+        
+        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.3, delay: 0, options: []) {
+            self.headerViewTopConstraints?.constant = shouldSnap ? -labelHeight : 0
+            self.view.layoutIfNeeded()
+        }
     }
 }
