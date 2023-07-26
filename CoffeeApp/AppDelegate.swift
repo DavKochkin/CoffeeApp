@@ -92,7 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let giftVC = GiftViewController()
         let storeVC = StoresViewController()
         
-        let homeNC = makeNavigationController(rootViewController: homeVC, title: "Good afternoon, David!")
+        
         let scanNC = UINavigationController(rootViewController: scanVC)
         let orderNC = UINavigationController(rootViewController: orderVC)
         let giftNC = UINavigationController(rootViewController: giftVC)
@@ -100,7 +100,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers =  [homeNC, scanNC, orderNC, giftNC, storeNC]
+        tabBarController.viewControllers =  [homeVC, scanNC, orderNC, giftNC, storeNC]
     
         window?.rootViewController = tabBarController
         
