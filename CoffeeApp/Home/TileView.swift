@@ -30,20 +30,17 @@ extension TileView {
     
     func style() {
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: "meatless")
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.font = UIFont.preferredFont(forTextStyle: .title3).bold()
         titleLabel.textColor = .label
-        titleLabel.text = "Breakfast made meatless"
         
         subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
         subtitleLabel.font = UIFont.preferredFont(forTextStyle: .footnote)
         subtitleLabel.numberOfLines = 0
         subtitleLabel.lineBreakMode = .byWordWrapping
-        subtitleLabel.text = "Try the Beyond Meat, Cheddar & Egg Breakfast Sandwich. Vegetarian and protein-packed."
         
         ctaButton.translatesAutoresizingMaskIntoConstraints = false
         
