@@ -16,6 +16,7 @@ class HomeViewController: CoffeeAppViewController {
     var headerViewTopConstraint: NSLayoutConstraint?
     
     let tiles = [
+                TileViewController(),
                 PlaceholderViewController("Star balance"),
                 PlaceholderViewController("Bonus stars"),
                 PlaceholderViewController("Try these"),
