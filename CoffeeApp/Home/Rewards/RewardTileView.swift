@@ -37,16 +37,16 @@ extension RewardTileView {
         rewardsGraphView.translatesAutoresizingMaskIntoConstraints = false
         starRewardsView.translatesAutoresizingMaskIntoConstraints = false
         
-        detailsButton.translatesAutoresizingMaskIntoConstraints = false
-        detailsButton.titleLabel?.text = "Details"
-        
         makeRewardsOptionButton()
         
-        detailsButton.backgroundColor = .systemBlue
+        rewardsGraphView.backgroundColor = .systemRed
+        
+        detailsButton = makeClearButton(withText: "Details")
     }
     
     func makeRewardsOptionButton() {
         rewardsButtons.translatesAutoresizingMaskIntoConstraints = false
+        //  rewardsButtons.addTarget(self, action: #selector(rewardOptionsTapped), for: .primaryActionTriggered)
         
         rewardsButtons.configuration = .plain()
         
@@ -58,8 +58,6 @@ extension RewardTileView {
         rewardsButtons.configuration?.imagePadding = 2
         rewardsButtons.configuration?.imagePlacement = .trailing
         rewardsButtons.configuration?.imageColorTransformer = .preferredTint
-        
-        //  rewardsButtons.addTarget(self, action: #selector(rewardOptionsTapped), for: .primaryActionTriggered)
     
     }
     
@@ -80,7 +78,10 @@ extension RewardTileView {
             
             rewardsGraphView.topAnchor.constraint(equalToSystemSpacingBelow: balanceView.bottomAnchor, multiplier: 1),
             rewardsGraphView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            rewardsGraphView.widthAnchor.constraint(equalToConstant: frame.width),
+//            rewardsGraphView.widthAnchor.constraint(equalToConstant: frame.width),
+            rewardsGraphView.heightAnchor.constraint(equalToConstant: 100),
+            rewardsGraphView.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 2),
+            trailingAnchor.constraint(equalToSystemSpacingAfter: rewardsGraphView.trailingAnchor, multiplier: 2),
             
             starRewardsView.topAnchor.constraint(equalTo: rewardsGraphView.bottomAnchor, constant: 8),
             starRewardsView.leadingAnchor.constraint(equalToSystemSpacingAfter: leadingAnchor, multiplier: 1),
