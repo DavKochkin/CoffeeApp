@@ -15,22 +15,17 @@ class HomeViewController: CoffeeAppViewController {
     
     var headerViewTopConstraint: NSLayoutConstraint?
     let tiles = [
-                TileViewController(title: "Breakfast made meatless",
-                                   subtitle: "Try the Beyond Meat, Cheddar & Egg Breakfast Sandwich. Vegetarian and protein-packed.",
-                                   imageName: "meatless"),
-                TileViewController(title: "Uplifting our communities",
-                                   subtitle: "Thanks to our partners nominations, The Starbucks Foundation is donating $145k to more than 50 local charities.",
-                                   imageName: "communities"),
-                TileViewController(title: "Spend at least $15 for 50 Bonus Stars",
-                                   subtitle: "Collect 50 Bonus Stars when you spend at least $15 pre-tax.",
-                                   imageName: "bonus"),
-                
-                PlaceholderViewController("Star balance"),
-                PlaceholderViewController("Bonus stars"),
-                PlaceholderViewController("Try these"),
-                PlaceholderViewController("Welcome back"),
-                PlaceholderViewController("Uplifting")
-                ]
+        RewardTileViewController(),
+        TileViewController(title: "Breakfast made meatless",
+                           subtitle: "Try the Beyond Meat, Cheddar & Egg Breakfast Sandwich. Vegetarian and protein-packed.",
+                           imageName: "meatless"),
+        TileViewController(title: "Uplifting our communities",
+                           subtitle: "Thanks to our partners nominations, The Starbucks Foundation is donating $145k to more than 50 local charities.",
+                           imageName: "communities"),
+        TileViewController(title: "Spend at least $15 for 50 Bonus Stars",
+                           subtitle: "Collect 50 Bonus Stars when you spend at least $15 pre-tax.",
+                           imageName: "bonus"),
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +47,6 @@ class HomeViewController: CoffeeAppViewController {
 extension HomeViewController {
     func layout() {
         headerView.translatesAutoresizingMaskIntoConstraints = false
-        headerView.backgroundColor = .systemPink
 
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         rootStackView.translatesAutoresizingMaskIntoConstraints = false
