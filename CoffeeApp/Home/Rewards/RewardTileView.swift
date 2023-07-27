@@ -37,16 +37,30 @@ extension RewardTileView {
         rewardsGraphView.translatesAutoresizingMaskIntoConstraints = false
         starRewardsView.translatesAutoresizingMaskIntoConstraints = false
         
-        rewardsButtons.translatesAutoresizingMaskIntoConstraints = false
         detailsButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        rewardsButtons.titleLabel?.text = "Rewards options"
         detailsButton.titleLabel?.text = "Details"
         
-        rewardsButtons.backgroundColor = .systemBlue
+        makeRewardsOptionButton()
+        
         detailsButton.backgroundColor = .systemBlue
+    }
+    
+    func makeRewardsOptionButton() {
+        rewardsButtons.translatesAutoresizingMaskIntoConstraints = false
         
+        rewardsButtons.configuration = .plain()
         
+        rewardsButtons.configuration?.title = "Rewards Options"
+        rewardsButtons.configuration?.baseForegroundColor = .darkGray
+        rewardsButtons.titleLabel?.font = UIFont.preferredFont(forTextStyle: .footnote)
+        
+        rewardsButtons.configuration?.image = UIImage(systemName: "chevron.down")
+        rewardsButtons.configuration?.imagePadding = 2
+        rewardsButtons.configuration?.imagePlacement = .trailing
+        rewardsButtons.configuration?.imageColorTransformer = .preferredTint
+        
+        //  rewardsButtons.addTarget(self, action: #selector(rewardOptionsTapped), for: .primaryActionTriggered)
+    
     }
     
     func layout() {
@@ -55,6 +69,7 @@ extension RewardTileView {
         addSubview(rewardsGraphView)
         addSubview(starRewardsView)
         addSubview(detailsButton)
+    
         
         NSLayoutConstraint.activate([
             balanceView.topAnchor.constraint(equalTo: topAnchor),
