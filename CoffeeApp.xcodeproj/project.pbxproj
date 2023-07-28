@@ -19,6 +19,7 @@
 		04E0D8992A7259CC0090DC77 /* RewardTileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0D8982A7259CC0090DC77 /* RewardTileViewController.swift */; };
 		04E0D89B2A7259D90090DC77 /* RewardTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0D89A2A7259D90090DC77 /* RewardTileView.swift */; };
 		04E0D89D2A725CF20090DC77 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0D89C2A725CF20090DC77 /* BalanceView.swift */; };
+		04E0D8DF2A73BE180090DC77 /* RewardsGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0D8DE2A73BE180090DC77 /* RewardsGraphView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		04E0D8982A7259CC0090DC77 /* RewardTileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardTileViewController.swift; sourceTree = "<group>"; };
 		04E0D89A2A7259D90090DC77 /* RewardTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardTileView.swift; sourceTree = "<group>"; };
 		04E0D89C2A725CF20090DC77 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
+		04E0D8DE2A73BE180090DC77 /* RewardsGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsGraphView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				04E0D8982A7259CC0090DC77 /* RewardTileViewController.swift */,
 				04E0D89A2A7259D90090DC77 /* RewardTileView.swift */,
 				04E0D89C2A725CF20090DC77 /* BalanceView.swift */,
+				04E0D8DE2A73BE180090DC77 /* RewardsGraphView.swift */,
 			);
 			path = Rewards;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E0D8DF2A73BE180090DC77 /* RewardsGraphView.swift in Sources */,
 				04E0D8902A710A450090DC77 /* HomeHeaderView.swift in Sources */,
 				04E0D89D2A725CF20090DC77 /* BalanceView.swift in Sources */,
 				04E0D89B2A7259D90090DC77 /* RewardTileView.swift in Sources */,
