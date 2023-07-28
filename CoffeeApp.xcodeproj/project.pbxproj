@@ -21,6 +21,7 @@
 		04E0D89D2A725CF20090DC77 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0D89C2A725CF20090DC77 /* BalanceView.swift */; };
 		04E0D8DF2A73BE180090DC77 /* RewardsGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0D8DE2A73BE180090DC77 /* RewardsGraphView.swift */; };
 		04E0D8E22A73DABB0090DC77 /* StarAndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0D8E12A73DABB0090DC77 /* StarAndPoints.swift */; };
+		04E0D8E42A73DE4B0090DC77 /* StarRewardsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0D8E32A73DE4B0090DC77 /* StarRewardsRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		04E0D89C2A725CF20090DC77 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
 		04E0D8DE2A73BE180090DC77 /* RewardsGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsGraphView.swift; sourceTree = "<group>"; };
 		04E0D8E12A73DABB0090DC77 /* StarAndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarAndPoints.swift; sourceTree = "<group>"; };
+		04E0D8E32A73DE4B0090DC77 /* StarRewardsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRewardsRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				04E0D8E12A73DABB0090DC77 /* StarAndPoints.swift */,
+				04E0D8E32A73DE4B0090DC77 /* StarRewardsRow.swift */,
 			);
 			path = StarRewards;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				04E0D8E22A73DABB0090DC77 /* StarAndPoints.swift in Sources */,
 				04E0D8962A7198820090DC77 /* TileView.swift in Sources */,
 				04BC964A2A7001A9003F4295 /* Factories.swift in Sources */,
+				04E0D8E42A73DE4B0090DC77 /* StarRewardsRow.swift in Sources */,
 				04E0D8942A7198540090DC77 /* TileViewController.swift in Sources */,
 				04BC96392A6FD816003F4295 /* HomeViewController.swift in Sources */,
 				04E0D8922A7187C20090DC77 /* PlaceholderViewController.swift in Sources */,
