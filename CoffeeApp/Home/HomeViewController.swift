@@ -9,11 +9,13 @@ import UIKit
 
 class HomeViewController: CoffeeAppViewController {
     
+    let topSpacerView = UIView()
     let headerView = HomeHeaderView()
     let scrollView = UIScrollView()
     let rootStackView = UIStackView()
     
     var headerViewTopConstraint: NSLayoutConstraint?
+    
     let tiles = [
         RewardsTileViewController(),
         TileViewController(title: "Breakfast made meatless",
@@ -46,14 +48,18 @@ class HomeViewController: CoffeeAppViewController {
 // MARK: Layout
 extension HomeViewController {
     func layout() {
+        view.backgroundColor = .backgroundWhite
+        topSpacerView.backgroundColor = .white
+        
+        topSpacerView.translatesAutoresizingMaskIntoConstraints = false
         headerView.translatesAutoresizingMaskIntoConstraints = false
-
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         rootStackView.translatesAutoresizingMaskIntoConstraints = false
         
         rootStackView.axis = .vertical
         rootStackView.spacing = 8
         
+        view.addSubview(topSpacerView)
         view.addSubview(headerView)
         view.addSubview(scrollView)
         
@@ -68,6 +74,11 @@ extension HomeViewController {
         headerViewTopConstraint = headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
 
         NSLayoutConstraint.activate([
+            topSpacerView.topAnchor.constraint(equalTo: view.topAnchor),
+            topSpacerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            topSpacerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            topSpacerView.heightAnchor.constraint(equalToConstant: 100),
+            
             headerViewTopConstraint!,
             headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
