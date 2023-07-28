@@ -40,7 +40,7 @@ class StarRewardsView: UIView {
 extension StarRewardsView {
     
     func style() {
-        backgroundColor = .systemBrown
+        backgroundColor = .systemGray5
         layer.cornerRadius = 10
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
