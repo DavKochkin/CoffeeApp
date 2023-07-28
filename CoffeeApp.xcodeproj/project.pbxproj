@@ -20,6 +20,7 @@
 		04E0D89B2A7259D90090DC77 /* RewardsTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0D89A2A7259D90090DC77 /* RewardsTileView.swift */; };
 		04E0D89D2A725CF20090DC77 /* BalanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0D89C2A725CF20090DC77 /* BalanceView.swift */; };
 		04E0D8DF2A73BE180090DC77 /* RewardsGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0D8DE2A73BE180090DC77 /* RewardsGraphView.swift */; };
+		04E0D8E22A73DABB0090DC77 /* StarAndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0D8E12A73DABB0090DC77 /* StarAndPoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		04E0D89A2A7259D90090DC77 /* RewardsTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsTileView.swift; sourceTree = "<group>"; };
 		04E0D89C2A725CF20090DC77 /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
 		04E0D8DE2A73BE180090DC77 /* RewardsGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsGraphView.swift; sourceTree = "<group>"; };
+		04E0D8E12A73DABB0090DC77 /* StarAndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarAndPoints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		04E0D88E2A710A040090DC77 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				04E0D8E02A73DA990090DC77 /* StarRewards */,
 				04E0D8972A72596E0090DC77 /* Rewards */,
 				04BC96382A6FD816003F4295 /* HomeViewController.swift */,
 				04E0D88F2A710A450090DC77 /* HomeHeaderView.swift */,
@@ -110,6 +113,14 @@
 				04E0D8DE2A73BE180090DC77 /* RewardsGraphView.swift */,
 			);
 			path = Rewards;
+			sourceTree = "<group>";
+		};
+		04E0D8E02A73DA990090DC77 /* StarRewards */ = {
+			isa = PBXGroup;
+			children = (
+				04E0D8E12A73DABB0090DC77 /* StarAndPoints.swift */,
+			);
+			path = StarRewards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +197,7 @@
 				04E0D8902A710A450090DC77 /* HomeHeaderView.swift in Sources */,
 				04E0D89D2A725CF20090DC77 /* BalanceView.swift in Sources */,
 				04E0D89B2A7259D90090DC77 /* RewardsTileView.swift in Sources */,
+				04E0D8E22A73DABB0090DC77 /* StarAndPoints.swift in Sources */,
 				04E0D8962A7198820090DC77 /* TileView.swift in Sources */,
 				04BC964A2A7001A9003F4295 /* Factories.swift in Sources */,
 				04E0D8942A7198540090DC77 /* TileViewController.swift in Sources */,
