@@ -7,9 +7,9 @@
 
 import UIKit
 
-class RewardTileViewController: UIViewController {
+class RewardsTileViewController: UIViewController {
     
-    let rewardTileView = RewardTileView()
+    let rewardTileView = RewardsTileView()
     
     override func viewDidLoad() {
         super.viewDidLoad()

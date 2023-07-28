@@ -7,6 +7,14 @@
 
 import UIKit
 
+/*
+ Because we don't know the exact size of our device initally, we create
+ a call back to let view controllers know once our initial graph has been rendered.
+ 
+ They can they tell us the exact width of the device, so we can they make the
+ sure we have the sizes layed out correctly.
+ */
+
 class RewardsGraphView: UIView {
     
     let imageView = UIImageView()
@@ -15,7 +23,7 @@ class RewardsGraphView: UIView {
     var actualFrameWidth: CGFloat?
     
     let height: CGFloat = 80
- 
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         layout()
@@ -25,42 +33,48 @@ class RewardsGraphView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        actualFrameWidth = frame.width
+    }
+    
     func layout() {
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        drawRewardsGraph()
         
         addSubview(imageView)
         
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: topAnchor),
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             imageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            imageView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
     }
     
+    override var intrinsicContentSize: CGSize {
+        return CGSize(width: UIView.noIntrinsicMetric, height: height)
+    }
+    
     func drawRewardsGraph() {
-     
+        
         let frameWidth: CGFloat = actualFrameWidth ?? initialFrameWidth
         
         let padding: CGFloat = 20
         let dotSize: CGFloat = 12
         let lineWidth: CGFloat = 2
         let numberOfDots: CGFloat = 5
-        let numberOfSections = numberOfDots - 1
+        let numberofSections = numberOfDots - 1
         
-        let spacingBetweenDots = (frameWidth - 2 * padding) / (numberOfDots + 0.5)
+        let spacingBetweenDots = (frameWidth - 2 * padding) / (numberofSections + 0.5)
         
-        let shortSegmentLenght = spacingBetweenDots * 0.25
+        let shortSegmentLength = spacingBetweenDots * 0.25
         
         let renderer = UIGraphicsImageRenderer(size: CGSize(width: frameWidth, height: height))
         
         var dots: [CGPoint] = []
-        let labels:  [String] = ["25", "50", "150", "250", "400"]
+        let labels: [String] = ["25", "50", "150", "250", "400"]
         
         // Because Core Graphics straddles its frame when it draws, and we want a circle
-        // exactly at this point, we need to offset by this amount in the y. The 50
+        // exactly at this point, we need to offset by this amount in the y. The indicatorOffset
         // is just to push everything down enough to make room for the green indicator.
         let indicatorOffset: CGFloat = 34
         let yOffset = (dotSize + lineWidth) / 2 + indicatorOffset
@@ -69,7 +83,7 @@ class RewardsGraphView: UIView {
             
             // Define our dots
             for index in 0...Int((numberOfDots - 1)) {
-                let x = padding + shortSegmentLenght + (spacingBetweenDots * CGFloat(index))
+                let x = padding + shortSegmentLength + (spacingBetweenDots * CGFloat(index))
                 dots.append(CGPoint(x: x, y: yOffset))
             }
             
@@ -79,7 +93,7 @@ class RewardsGraphView: UIView {
             
             // Draw starting segment
             let firstShortSegmentBegin = padding
-            let firstShortSegmentEnd = padding + shortSegmentLenght - dotSize/2
+            let firstShortSegmentEnd = padding + shortSegmentLength - dotSize/2
             
             ctx.cgContext.move(to: CGPoint(x: firstShortSegmentBegin, y: yOffset))
             ctx.cgContext.addLine(to: CGPoint(x: firstShortSegmentEnd, y: yOffset))
@@ -87,7 +101,7 @@ class RewardsGraphView: UIView {
             
             // Draw ending segment
             let lastShortSegmentEnd = frameWidth - padding
-            let lastShortSegmentBegin = lastShortSegmentEnd - shortSegmentLenght
+            let lastShortSegmentBegin = lastShortSegmentEnd - shortSegmentLength
             
             ctx.cgContext.move(to: CGPoint(x: lastShortSegmentBegin, y: yOffset))
             ctx.cgContext.addLine(to: CGPoint(x: lastShortSegmentEnd, y: yOffset))
@@ -98,7 +112,7 @@ class RewardsGraphView: UIView {
             
             ctx.cgContext.setFillColor(UIColor.white.cgColor)
             
-            // Draw our Dots
+            // Draw our dots
             for dot in dots {
                 let dotBounds = CGRect(x: dot.x - (dotSize * 0.5),
                                        y: dot.y - (dotSize * 0.5),
@@ -111,7 +125,7 @@ class RewardsGraphView: UIView {
             
             // Draw points consumed
             let pointsConsumedBegin = firstShortSegmentBegin
-            let pointsConsumedEnd = padding + shortSegmentLenght / 2
+            let pointsConsumedEnd = padding + shortSegmentLength / 2
             
             ctx.cgContext.setStrokeColor(UIColor.starYellow.cgColor)
             
@@ -143,7 +157,6 @@ class RewardsGraphView: UIView {
                 attributedString.draw(with: CGRect(x: dot.x - 15, y: dot.y + 16, width: 30, height: 20), options: .usesLineFragmentOrigin, context: nil)
             }
         }
-        
         imageView.image = img
     }
 }
