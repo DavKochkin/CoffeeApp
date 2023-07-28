@@ -22,6 +22,7 @@
 		04E0D8DF2A73BE180090DC77 /* RewardsGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0D8DE2A73BE180090DC77 /* RewardsGraphView.swift */; };
 		04E0D8E22A73DABB0090DC77 /* StarAndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0D8E12A73DABB0090DC77 /* StarAndPoints.swift */; };
 		04E0D8E42A73DE4B0090DC77 /* StarRewardsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0D8E32A73DE4B0090DC77 /* StarRewardsRow.swift */; };
+		04E0D8E62A73E3980090DC77 /* StarRewardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E0D8E52A73E3980090DC77 /* StarRewardsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		04E0D8DE2A73BE180090DC77 /* RewardsGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsGraphView.swift; sourceTree = "<group>"; };
 		04E0D8E12A73DABB0090DC77 /* StarAndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarAndPoints.swift; sourceTree = "<group>"; };
 		04E0D8E32A73DE4B0090DC77 /* StarRewardsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRewardsRow.swift; sourceTree = "<group>"; };
+		04E0D8E52A73E3980090DC77 /* StarRewardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRewardsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			children = (
 				04E0D8E12A73DABB0090DC77 /* StarAndPoints.swift */,
 				04E0D8E32A73DE4B0090DC77 /* StarRewardsRow.swift */,
+				04E0D8E52A73E3980090DC77 /* StarRewardsView.swift */,
 			);
 			path = StarRewards;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				04E0D8942A7198540090DC77 /* TileViewController.swift in Sources */,
 				04BC96392A6FD816003F4295 /* HomeViewController.swift in Sources */,
 				04E0D8922A7187C20090DC77 /* PlaceholderViewController.swift in Sources */,
+				04E0D8E62A73E3980090DC77 /* StarRewardsView.swift in Sources */,
 				04BC96352A6FD816003F4295 /* AppDelegate.swift in Sources */,
 				04E0D8992A7259CC0090DC77 /* RewardsTileViewController.swift in Sources */,
 			);
